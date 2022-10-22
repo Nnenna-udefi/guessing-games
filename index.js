@@ -7,7 +7,7 @@ for (i = 0; i > 5; i++){
 
 
 function greet(name){
-  console.log("Hello " + name + ",");
+  console.log("Hello " + name + ", welcome to my secret guessing game.\nHere are the rules: I will think of a secret number and you are going to try and guess it.\nHere we go!");
 }
 
 greet(name);
@@ -25,15 +25,16 @@ function guessNumber(){
   let number = parseInt(prompt("Guess a number from 1 to 2: "));
 
   //take user's input until the guess is right
-  // while (number != random){
-  //   console.log("You guessed wrong, Try Again!");
-  //   number = parseInt(prompt("Guess a number from 1 to 2: "))
-  // }
-
-  if (number == random){
-    console.log("You guessed right. You've scored " + point + " point" );
-    
+  if (number < random){
+    console.log("You guessed wrong, Try a higher number!");
+   number = parseInt(prompt("Guess a number from 1 to 2: "))
   }
+  else if (number > random){
+    console.log("You guessed wrong, Try a lower number!");
+   number = parseInt(prompt("Guess a number from 1 to 2: "))
+  }
+  else (number == random)
+    console.log("You guessed right. You've scored " + point + " point" );
 
 }
 
@@ -52,15 +53,17 @@ function guessNumber2(){
   let number = parseInt(prompt("Guess a number from 1 to 3: "));
 
   //take user's input until the guess is right
-  // while (number != random){
-  //   console.log("You guessed wrong, Try Again!");
-  //   number = parseInt(prompt("Guess a number from 1 to 3: "))
-  // }
-
-  if (number == random){
-    console.log("You guessed right. You've scored " + point + " points");
-    
+  if (number < random){
+    console.log("You guessed wrong, Try a higher number!");
+   number = parseInt(prompt("Guess a number from 1 to 3: "))
   }
+  else if (number > random){
+    console.log("You guessed wrong, Try a lower number!");
+   number = parseInt(prompt("Guess a number from 1 to 3: "))
+  }
+  else (number == random)
+    console.log("You guessed right. You've scored " + point + " point" );
+    
 
 }
 
@@ -80,15 +83,16 @@ function guessNumber3(){
   let number = parseInt(prompt("Guess a number from 1 to 4: "));
 
   //take user's input until the guess is right
-  // while (number != random){
-  //   console.log("You guessed wrong, Try Again!");
-  //   number = parseInt(prompt("Guess a number from 1 to 4: "))
-  // }
-
-  if (number == random){
-    console.log("You guessed right. You've scored " + point + " points");
-    
+  if (number < random){
+    console.log("You guessed wrong, Try a higher number!");
+   number = parseInt(prompt("Guess a number from 1 to 4: "))
   }
+  else if (number > random){
+    console.log("You guessed wrong, Try a lower number!");
+   number = parseInt(prompt("Guess a number from 1 to 4: "))
+  }
+  else (number == random)
+    console.log("You guessed right. You've scored " + point + " point" );
 
 }
 
@@ -107,16 +111,17 @@ function guessNumber4(){
   let number = parseInt(prompt("Guess a number from 1 to 5: "));
 
   //take user's input until the guess is right
-  // while (number != random){
-  //   console.log("You guessed wrong, Try Again!");
-  //   number = parseInt(prompt("Guess a number from 1 to 5: "))
-  // }
-
-  if (number == random){
-    console.log("You guessed right. You've scored " + point + " points");
-    
+  if (number < random){
+    console.log("You guessed wrong, Try a higher number!");
+   number = parseInt(prompt("Guess a number from 1 to 5: "))
   }
-
+  else if (number > random){
+    console.log("You guessed wrong, Try a lower number!");
+   number = parseInt(prompt("Guess a number from 1 to 5: "))
+  }
+  else (number == random)
+    console.log("You guessed right. You've scored " + point + " point" );
+    
 }
 
 guessNumber4()
