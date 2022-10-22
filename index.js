@@ -1,13 +1,13 @@
+var emoji = require('node-emoji');
+
+const smiley = emoji.get("smiley")
 let name = prompt("Enter your username: ");
 
 let point = 0;
-for (i = 0; i > 5; i++){
-  point = point + 1
-}
-
+point += 1
 
 function greet(name){
-  console.log("Hello " + name + ", welcome to my secret guessing game.\nHere are the rules: I will think of a secret number and you are going to try and guess it.\nHere we go!");
+  console.log("Hello " + name + "! Welcome to my secret guessing game " + smiley + ".\nHere are the rules: I will think of a secret number and you are going to try and guess it.\nHere we go! ");
 }
 
 greet(name);
@@ -34,7 +34,8 @@ function guessNumber(){
    number = parseInt(prompt("Guess a number from 1 to 2: "))
   }
   else (number == random)
-    console.log("You guessed right. You've scored " + point + " point" );
+    console.log("You guessed right. Score: " + point + " point" );
+  point += 1;
 
 }
 
@@ -62,8 +63,8 @@ function guessNumber2(){
    number = parseInt(prompt("Guess a number from 1 to 3: "))
   }
   else (number == random)
-    console.log("You guessed right. You've scored " + point + " point" );
-    
+    console.log("You guessed right. Score: " + point + " points" );
+  point += 1;  
 
 }
 
@@ -92,8 +93,8 @@ function guessNumber3(){
    number = parseInt(prompt("Guess a number from 1 to 4: "))
   }
   else (number == random)
-    console.log("You guessed right. You've scored " + point + " point" );
-
+    console.log("You guessed right. Score: " + point + " points" );
+point += 1;
 }
 
 guessNumber3()
@@ -120,8 +121,10 @@ function guessNumber4(){
    number = parseInt(prompt("Guess a number from 1 to 5: "))
   }
   else (number == random)
-    console.log("You guessed right. You've scored " + point + " point" );
-    
+    console.log("You guessed right. Score: " + point + " points" );
+ point += 1;  
 }
 
 guessNumber4()
+
+console.log(`Congratulations ${name}! You've reached the end of the game.`);
